@@ -1,0 +1,18 @@
+Every Testcase should be repeated at least 10 times in distinct areas of an
+defined area. That means casually running around and trying to die.
+
+# dying versions
+- FIGHTING
+- FALLING
+
+# GENERAL AREAS
+- limgrave overworld
+- normal caves (grey)
+- dark caves like the poison area (very dark)
+
+# TRY TO FCK THE SYSTEM
+- blood area
+- trying to die with very much red in the image
+
+
+
