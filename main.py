@@ -106,10 +106,8 @@ def get_center_screen_text(img_path: str):
 
 # ----------------------------------------------------------------------------
 def screenshot() -> str:
-    filename = str(i) if debug else "tmp"
-
     img = pyautogui.screenshot()
-    path = os.path.join(os.path.dirname(__file__), "images", f"{filename}.jpg")
+    path = os.path.join(os.path.dirname(__file__), "images", f"tmp.jpg")
     img.save(path)
 
     log.debug(f"Saved screen-image: {path}")
@@ -137,25 +135,25 @@ def get_ocr_diff_ratio(text_rec: str, match: str) -> float:
 # toast.show_toast("Elden Ring Dying Message", "Du bist gesterbiet!")
 
 
-i = 0
-while True:
-    log.debug(f"--------------------------------------------------------  {i}")
+# i = 0
+# while True:
+#     log.debug(f"--------------------------------------------------------  {i}")
+#
+#     text = get_center_screen_text(screenshot())
+#     ratio = get_ocr_diff_ratio(text, MATCH_DIED_DE)
+#
+#     if ratio >= 0.5:
+#         print(f"MÄH: {text} - {ratio}")
+#
+#         log.info("-- GESTORBEN --")
+#         iter_counter_file()
+#         time.sleep(5)
+#     else:
+#         time.sleep(300 / 1000)
+#
+#     i += 1
 
-    text = get_center_screen_text(screenshot())
-    ratio = get_ocr_diff_ratio(text, MATCH_DIED_DE)
-
-    if ratio >= 0.5:
-        print(f"MÄH: {text} - {ratio}")
-
-        log.info("-- GESTORBEN --")
-        iter_counter_file()
-        time.sleep(5)
-    else:
-        time.sleep(300 / 1000)
-
-    i += 1
-
-# text = get_center_screen_text(screenshot())
+text = get_center_screen_text(screenshot())
 
 # # ----------------------------------------------------------------------------
 # def is_died_screen(imgpath: str):
