@@ -139,6 +139,21 @@ def get_red_screen_text(path: str) -> Tuple[Any, Any, Any, str]:
 
 
 # ----------------------------------------------------------------------------
+def get_center_image(cv_image: Any):
+    pass
+
+
+# ----------------------------------------------------------------------------
+def get_red_screen(cv_image: Any):
+    pass
+
+
+# ----------------------------------------------------------------------------
+def get_yellow_screen(cv_image: Any):
+    pass
+
+
+# ----------------------------------------------------------------------------
 def make_screenshot() -> str:
     name = time.time()
     img = pyautogui.screenshot()
@@ -316,16 +331,15 @@ async def loop_screenshot(sleep_time: float = PICK_RATIO):
 
 
 # ----------------------------------------------------------------------------
-async def main():
-    f1 = loop.create_task(loop_screenshot())
-    f2 = loop.create_task(loop_detection())
-
-    await asyncio.wait([f1, f2])
+def load_example_image():
+    pass
 
 
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
 if __name__ == "__main__":
+    pass
+
     # loop = asyncio.get_event_loop()
     # loop.run_until_complete(main())
     # loop.close()
@@ -333,10 +347,10 @@ if __name__ == "__main__":
     # while True:
     #     print(get_foreground_window_title())
 
-    loop = asyncio.get_event_loop()
-    asyncio.ensure_future(loop_screenshot())
-    asyncio.ensure_future(loop_detection())
-    loop.run_forever()
+    # loop = asyncio.get_event_loop()
+    # asyncio.ensure_future(loop_screenshot())
+    # asyncio.ensure_future(loop_detection())
+    # loop.run_forever()
 
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
