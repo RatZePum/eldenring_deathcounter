@@ -22,3 +22,17 @@ OCR Engine modes (OEM | --oem):
     1 Neural nets LSTM engine only.
     2 Legacy + LSTM engines.
     3 Default, based on what is available.
+
+
+The crop have to be with a border of a view px like 20+
+without a border the image recognition fails nearly every time
+
+now i use >> [480:600, 300: 1600] <<
+
+before there was no border on top or bottom [515:575, ...]
+=> no recognition happened
+
+
+full crop and masking works fine with default settings
+normal crop without masking needs psm 13 owm 2
+
